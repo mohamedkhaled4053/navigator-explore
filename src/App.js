@@ -14,27 +14,14 @@ function App() {
     serial: navigator.serial,
     xr: navigator.xr,
     windowControlsOverlay: navigator.windowControlsOverlay,
-    screen:`${window.screen.width} x ${window.screen.height}`,
+    screen: `${window.screen.availWidth} x ${window.screen.availHeight}`,
   };
 
   console.log(obj);
 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <header className="App-header">{obj.screen}</header>
     </div>
   );
 }
